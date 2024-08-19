@@ -1,10 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { InvestimentoCDB } from '../models/investimento-cdb.model'; 
-import { InvestimentoResult } from '../models/investimento-result.model'; 
- 
+import { InvestimentoResult } from '../models/investimento-result.model';  
+
 const baseUrl = `${environment.api}/InvestimentoCDB`;
 
 @Injectable({
@@ -19,10 +19,10 @@ export class InvestimentoCDBService {
       'Content-Type': 'application/json'
     }); 
      
-    return this.http.post(baseUrl, {
+    return this.http.post<any>(baseUrl, {
       'Valor': investimentoCDB.Valor,
       'PrazoEmMeses':investimentoCDB.PrazoEmMeses
-    },{ headers }); 
+    },{ headers });
   } 
 
 }

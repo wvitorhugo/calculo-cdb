@@ -1,22 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { InvestimentoCDBService } from './services/investimento-cdb.service';
-import { InvestimentoCDB } from './models/investimento-cdb.model'; 
-import { InvestimentoResult } from  './models/investimento-result.model';
-import { FormsModule } from '@angular/forms'; 
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { InvestimentoCDBService } from './services/investimento-cdb.service'; 
+import { FormsModule } from '@angular/forms';   
 import { CommonModule } from '@angular/common';  
-
-
+ 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
-    HttpClientModule,  
+    RouterOutlet, 
     CommonModule,
     FormsModule],
   templateUrl: './app.component.html',
@@ -40,17 +33,17 @@ export class AppComponent {
        Valor: this.Valor,
        PrazoEmMeses: this.PrazoEmMeses
     }).subscribe(
-      (resposta) => {
-        console.log(resposta);
+      (complete) => {
+        console.log(complete);
         this.resultado =
-        `Valor Bruto: R$ ${resposta.valorBruto}`+
-        ` | Valor Líquido: R$ ${resposta.valorLiquido}`+
-        ` | Valor Taxa: R$ ${resposta.valorTaxa}`
-        resposta;
+        `Valor Bruto: R$ ${complete.valorBruto}`+
+        ` | Valor Líquido: R$ ${complete.valorLiquido}`+
+        ` | Valor Taxa: R$ ${complete.valorTaxa}`
+        complete;
       },
-      (erro) => {
-        console.log(erro);
-        this.resultado = `Erro: ${erro.error.message}`;
+      (error) => {
+        console.log(error);
+        this.resultado = `Erro: ${error.message}`;
       }
     );
   } 
