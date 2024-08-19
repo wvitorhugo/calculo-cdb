@@ -78,7 +78,7 @@ Web: Org.CalculoCDB.Web
 ## Pré-requisitos
 
 <H2>API</H2>
-- [.NET] 5.0; 
+- [.NET] 5.0;
 - [Swagger] 5.6.3;
 - [XUnit] 2.4.1;
 
