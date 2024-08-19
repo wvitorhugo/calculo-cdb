@@ -78,13 +78,13 @@ Web: Org.CalculoCDB.Web
 ## Pré-requisitos
 
 <H2>API</H2>
-- [.NET] 5.0;
-- [Swagger] 5.6.3;
-- [XUnit] 2.4.1;
+<p>- [.NET] 5.0;</p>
+<p>- [Swagger] 5.6.3;</p>
+<p>- [XUnit] 2.4.1;</p>
 
 <H2>Web</H2>
-- [Typescript] 5.5.4;
-- [Angular] 18.2.0; 
+<p>- [Typescript] 5.5.4;</p>
+<p>- [Angular] 18.2.0; </p>
 
 ## Como rodar a aplicação :arrow_forward:
 
