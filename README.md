@@ -107,7 +107,15 @@ Verifique se todos os pacotes NuGet foram restaurados corretamente. Se necessár
    - Pressione F5 ou clique em "Start" no Visual Studio para iniciar a API.
 
 3. **Verifique se a API está em execução corretamente:**
-   - Abra um navegador e acesse `https://localhost:44334/swagger/index.html` para confirmar se a API está respondendo como esperado pelo Swagger.
+   - Abra um navegador e acesse `https://localhost:44334/` para confirmar se a API está respondendo como esperado.
+  
+<H2>Importante!</H2>
+**Se a aplicação apresentar o erro: "Could not find a part of the path \roslyn\csc.exe", execute o comando a baixo:**
+```
+Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+```
+
+
    
 
 <H2>Web</H2>
