@@ -108,16 +108,14 @@ Verifique se todos os pacotes NuGet foram restaurados corretamente. Se necessár
 
 3. **Verifique se a API está em execução corretamente:**
    - Abra um navegador e acesse `https://localhost:44334/` para confirmar se a API está respondendo como esperado.
-  
-<H2>Importante!</H2>
+
+<H2  style="color: red">Importante!</H2>
 **Se a aplicação apresentar o erro: "Could not find a part of the path \roslyn\csc.exe", execute o comando a baixo:**
+
 ```
 Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
 ```
-
-
-   
-
+ 
 <H2>Web</H2>
 
 Abra o diretório src\Org.CalculoCDB.Web\ no Terminal.
