@@ -33,17 +33,14 @@ export class AppComponent {
        Valor: this.Valor,
        PrazoEmMeses: this.PrazoEmMeses
     }).subscribe(
-      (complete) => {
-        console.log(complete);
+      (complete) => { 
         this.resultado =
-        `Valor Bruto: R$ ${complete.valorBruto}`+
-        ` | Valor Líquido: R$ ${complete.valorLiquido}`+
-        ` | Valor Taxa: R$ ${complete.valorTaxa}`
-        complete;
+        `Valor Bruto: R$ ${complete.ValorBruto}`+
+        ` | Valor Líquido: R$ ${complete.ValorLiquido}`+
+        ` | Valor Taxa: R$ ${complete.ValorTaxa}`;
       },
-      (error) => {
-        console.log(error);
-        this.resultado = `Erro: ${error.message}`;
+      (error) => { 
+        this.resultado = `Erro: ${error.error.Message}`;
       }
     );
   } 

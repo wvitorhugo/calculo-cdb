@@ -2,10 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { InvestimentoCDB } from '../models/investimento-cdb.model'; 
-import { InvestimentoResult } from '../models/investimento-result.model';  
+import { InvestimentoCDB } from '../models/investimento-cdb.model';  
 
-const baseUrl = `${environment.api}/InvestimentoCDB`;
+const baseUrl = `${environment.api}/api/InvestimentoCDB`;
 
 @Injectable({
   providedIn: 'root',

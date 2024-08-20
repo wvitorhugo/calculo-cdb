@@ -7,14 +7,13 @@ namespace Org.CalculoCDB.Application.Test.Services
 {
     public class InvestimentoCDBTests
     {
-        private readonly InvestimentoCDB _calculator;
+        private InvestimentoCDB _calculator;
 
         public InvestimentoCDBTests()
         {
             _calculator = new InvestimentoCDB();
         }
-
-
+         
         [Fact]
         public void Calcular_DeveRetornarExcecaoParaPrazoNegativo()
         {
